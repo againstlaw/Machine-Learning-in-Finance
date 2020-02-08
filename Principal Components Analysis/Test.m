@@ -8,8 +8,6 @@ c = fred(url);
 startdate = '01/01/1995';
 enddate = today;
 
-% series = {'DGS3MO','DGS6MO','DGS1','DGS2','DGS3','DGS5','DGS7','DGS10','DGS20','DGS30'};
-
 series = {'DGS3MO','DGS6MO','DGS1','DGS2','DGS3','DGS5','DGS7','DGS10','DGS20'};
 Maturity=[3/12 6/12 1 2 3 5 7 10 20];
 CMR = fetch(c,series,startdate,enddate);
@@ -101,18 +99,6 @@ ylabel('Interest rate (%)', 'Fontsize',12)
 legend({'PC2: Slope','10yr - 3m'}, 'FontSize', 12, 'Location','best')
 
 
-% yyaxis left
-% plot(StockDate,PC(:,2),'r-','linewidth',1)
-% ylabel('Interest rate (%)', 'Fontsize',12)
-% 
-% yyaxis right
-% plot(StockDate,SecondPC,'b-','linewidth',1)
-% ylabel('Interest rate (%)', 'Fontsize',12)
-% 
-% title('Slope','Fontsize',14)
-% legend({'PC2: Slope','10yr - 3m'}, 'FontSize', 12, 'Location','best')
-
-
 
 figure(5)
 plot(StockDate,PC(:,3),'r-','linewidth',1)
@@ -140,22 +126,6 @@ grid on
 title('10-Year Treasury Constant Maturity Rate','Fontsize',14)
 ylabel('Interest rate (%)', 'Fontsize',12)
 legend({'Observed','Predicted'}, 'FontSize', 12, 'Location','best')
-
-
-
-
-
-
-
-
-% r=[];
-% for i=1:1
-%     myData=CMR(i).Data;
-%     r=[r,myData(:,2)];
-% end
-
-% DateStrings=datestr(myData(:,1));
-% Date=datetime(DateStrings,'InputFormat','dd-MMM-yyy');
 
 
 
