@@ -13,25 +13,6 @@ myData=Data{:,3:6};
 Z = zscore(myData);
 
 
-% % Hierarchical Clustering
-% eucD = pdist(Z,'euclidean');
-% clustTreeEuc = linkage(eucD,'average');
-% 
-% % The cophenetic correlation is one way to verify that the cluster tree 
-% % is consistent with the original distances. 
-% % Large values indicate that the tree fits the distances well
-% cophenet(clustTreeEuc,eucD)
-% 
-% 
-% % To visualize the hierarchy of clusters
-% [h,nodes] = dendrogram(clustTreeEuc,0);
-% h_gca = gca;
-% h_gca.TickDir = 'out';
-% h_gca.TickLength = [.002 0];
-% h_gca.XTickLabel = [];
-
-
-
 % Hierarchical Clustering
 cosD = pdist(Z,'cosine');
 clustTreeCos = linkage(cosD,'average');
