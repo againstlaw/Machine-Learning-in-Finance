@@ -40,6 +40,7 @@ myTable4.Properties.RowNames=param_names;
 myTable4
 
 
+
 function mytable=stats(x)
 
 minval=min(x);
