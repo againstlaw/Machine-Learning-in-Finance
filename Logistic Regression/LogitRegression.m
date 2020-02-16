@@ -44,20 +44,3 @@ params
 
 
 
-% params=mdl.Coefficients
-% b=params.Estimate;
-% 
-% 
-% % define logistic function
-% sigmoid = @(x) 1./(1+exp(-x));
-% 
-% N=length(resp);
-% mypred=[ones(N,1), pred];
-% 
-% % predict
-% modelfit = sigmoid(mypred*b) >= 0.5;
-% 
-% correct = sum(modelfit==resp) / length(resp) * 100
-% 
-
-
