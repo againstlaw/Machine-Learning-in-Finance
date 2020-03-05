@@ -1,11 +1,4 @@
 
-"""
-Created on Wed Feb 26 11:03:01 2020
-
-@author: Jason
-"""
-
-
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
@@ -69,8 +62,6 @@ print(df)
 df = pd.DataFrame(clf.coef_.T, X.columns, columns=['Coef'])
 df.loc['(Intercept)'] = clf.intercept_
 print(df)
-
-
 
 
 
